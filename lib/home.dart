@@ -1,7 +1,9 @@
+import 'package:collegex/styles/icons.dart';
 import 'package:collegex/widgets/slider.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:collegex/widgets/drawer.dart';
+import 'package:flutter_svg/svg.dart';
 
 
 class Homescreen extends StatelessWidget {
@@ -12,7 +14,7 @@ class Homescreen extends StatelessWidget {
     return Scaffold(appBar: AppBar(
       backgroundColor: Colors.white,
       elevation: 0,
-      title:const Image(image: AssetImage('assets/svg/logo_main.svg')),
+      title:SvgPicture.asset(mainlogo),
       centerTitle: true,
       // leading: IconButton(icon: Icon(Icons.menu),onPressed:MainDrawer()),
       actions: [

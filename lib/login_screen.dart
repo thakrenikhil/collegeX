@@ -1,5 +1,7 @@
 import 'package:collegex/home.dart';
+import 'package:collegex/styles/icons.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -11,15 +13,8 @@ class LoginScreen extends StatelessWidget {
         child: Column(
           children: [
             const Image(image: AssetImage("assets/images/orangetop.png")),
-            const Center(
-              child: Text(
-                "CollegeX",
-                style: TextStyle(
-                    fontSize: 40,
-                    fontWeight: FontWeight.bold,
-                    fontFamily: 'jsMath',
-                    color: Colors.white),
-              ),
+             Center(
+              child: SvgPicture.asset(mainlogo)
             ),
             const SizedBox(
               height: 40,
