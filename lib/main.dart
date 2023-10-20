@@ -1,5 +1,5 @@
-import 'package:collegex/home.dart';
-import 'package:collegex/login_screen.dart';
+import 'package:collegex/screen/home.dart';
+import 'package:collegex/screen/login_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -47,3 +47,4 @@ class _MyHomePageState extends State<MyHomePage> {
       body: LoginScreen());
   }
 }
+

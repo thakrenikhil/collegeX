@@ -37,7 +37,7 @@ class _SliderScreenState extends State<SliderScreen> {
                       autoPlay: true,
                       reverse: true,
                       autoPlayCurve: Curves.easeInOutExpo,
-                      autoPlayInterval: const Duration(seconds: 2),
+                      autoPlayInterval: const Duration(seconds: 5),
 
                     ))),
           ],
