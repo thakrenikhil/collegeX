@@ -4,4 +4,5 @@ class xColors {
   static Color black =
       const Color.fromRGBO(18, 17, 17, 1.0);
   static Color white = Colors.white;
+  static Color red = Colors.red;
 }

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "661704745949",
+    "project_id": "collagex-61af8",
+    "storage_bucket": "collagex-61af8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:661704745949:android:6414c3777286591b374c34",
+        "android_client_info": {
+          "package_name": "com.example.collegex"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqXkEzwXXz1Cfu9jfgPiEUuxbJWgD5ZQo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
