@@ -1,0 +1,5 @@
+1. flex_color_scheme -- good for color flex_color_scheme
+2. gap - give gap rather than padding and sizedbox
+3. need to think on
+    - the cache mechanism
+    - auth - like otp for verification feature

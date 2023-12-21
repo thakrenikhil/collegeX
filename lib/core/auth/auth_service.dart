@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:collegex/core/auth/auth_apiclient.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -13,7 +14,7 @@ extension on AuthMode {
           : 'Register';
 }
 
-class xAuth {
+class xAuthService {
   // doing all type of auth functionality here
   //auth to cover
   // 1.google
@@ -28,7 +29,9 @@ class xAuth {
 
   final AuthMode mode = AuthMode.login;
 
-  // GlobalKey<FormState> formKey = GlobalKey<FormState>(); -- get controller over any form
+  // GlobalKey<FormState> formKey = GlobalKey<FormState>(); -- get control over any form
+
+  //final xApiClient _apiClient = xApiClient(); -- use in custom backend
 
   Future<void> emailAuth(GlobalKey<FormState> key,
       String email, String password) async {
@@ -54,13 +57,28 @@ class xAuth {
     final googleAuth =
         await googleUser?.authentication;
 
+    //get credential
     if (googleAuth != null) {
       final cred = GoogleAuthProvider.credential(
           accessToken: googleAuth.accessToken,
           idToken: googleAuth.idToken);
 
+      //login
+
       await _fireBaseAuth
           .signInWithCredential(cred);
     }
+  }
+
+  Future<void> phoneAuth(
+      String phoneNumber) async {
+    if (mode == AuthMode.phone) {
+      await _fireBaseAuth
+          .signInWithPhoneNumber(phoneNumber);
+    }
+  }
+
+  Future<void> logout() async {
+    await _fireBaseAuth.signOut();
   }
 }
