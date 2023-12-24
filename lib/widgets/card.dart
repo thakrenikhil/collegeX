@@ -1,6 +1,7 @@
 import 'package:collegex/theme/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:shimmer/shimmer.dart';
 
 // Mixin for providing common styling properties
 mixin CardStyles {
@@ -14,9 +15,9 @@ mixin CardStyles {
 
 class xCard extends ConsumerWidget
     with CardStyles {
-  xCard({super.key});
+  xCard(this.child, {super.key});
 
-  Widget? child;
+  final Widget child;
 
   xCard WithCircular(double radius) {
     borderRadius = BorderRadius.circular(radius);
@@ -35,8 +36,11 @@ class xCard extends ConsumerWidget
       margin: padding,
       elevation: 1,
       color: xColors.grey,
-      child:
-          child ?? const Text('add a child here'),
+      child: Center(
+          child: child ??
+               Text('add a child here')),
     );
   }
 }
+
+

@@ -3,3 +3,4 @@
 3. need to think on
     - the cache mechanism
     - auth - like otp for verification feature
+4. shimmer efffect for api when loading

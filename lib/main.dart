@@ -1,6 +1,6 @@
 import 'package:collegex/firebase_options.dart';
 import 'package:collegex/screen/loading_screen.dart';
-import 'package:collegex/screen/login_screen.dart';
+import 'package:collegex/screen/login/login_screen.dart';
 import 'package:collegex/utilities/ux_utils.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';

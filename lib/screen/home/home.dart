@@ -31,60 +31,75 @@ class Homescreen extends StatelessWidget {
             child: SizedBox(
               child: Column(
                 children: [
-                  ImageSlider(),
+                  const ImageSlider(),
                   StaggeredGrid.count(
                     crossAxisCount: 4,
-                    mainAxisSpacing: 4,
-                    crossAxisSpacing: 4,
+                    mainAxisSpacing: 1,
+                    crossAxisSpacing: 1,
                     children: [
                       StaggeredGridTile.count(
                         crossAxisCellCount: 1,
                         mainAxisCellCount: 1,
-                        child: xCard()
+                        child: xCard(const Icon(
+                                Icons
+                                    .access_alarm))
                             .WithCircular(50),
                       ),
                       StaggeredGridTile.count(
                         crossAxisCellCount: 1,
                         mainAxisCellCount: 1,
-                        child: xCard()
+                        child: xCard(const Icon(
+                                Icons
+                                    .access_alarm))
                             .WithCircular(50),
                       ),
                       StaggeredGridTile.count(
                         crossAxisCellCount: 1,
                         mainAxisCellCount: 1,
-                        child: xCard()
+                        child: xCard(const Icon(
+                                Icons
+                                    .access_alarm))
                             .WithCircular(50),
                       ),
                       StaggeredGridTile.count(
                         crossAxisCellCount: 1,
                         mainAxisCellCount: 1,
-                        child: xCard()
+                        child: xCard(const Icon(
+                                Icons
+                                    .access_alarm))
                             .WithCircular(50),
                       ),
                       StaggeredGridTile.count(
                         crossAxisCellCount: 2,
                         mainAxisCellCount: 2,
-                        child: xCard(),
+                        child: xCard(const Icon(
+                            Icons.abc)),
                       ),
                       StaggeredGridTile.count(
                         crossAxisCellCount: 2,
                         mainAxisCellCount: 2,
-                        child: xCard(),
+                        child: xCard(Icon(
+                            Icons.account_tree)),
                       ),
                       StaggeredGridTile.count(
                         crossAxisCellCount: 4,
                         mainAxisCellCount: 2,
-                        child: xCard(),
+                        child: xCard(Icon(
+                            Icons.account_tree)),
                       ),
                       StaggeredGridTile.count(
                         crossAxisCellCount: 3,
                         mainAxisCellCount: 1,
-                        child: xCard(),
+                        child: xCard(Icon(
+                            Icons.account_tree)),
                       ),
                       StaggeredGridTile.count(
                         crossAxisCellCount: 1,
                         mainAxisCellCount: 1,
-                        child: xCard(),
+                        child: xCard(Icon(
+                          Icons.account_tree,
+                          color: xColors.red,
+                        )),
                       ),
                     ],
                   )
