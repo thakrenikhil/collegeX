@@ -1,4 +1,4 @@
-import 'package:collegex/screen/home.dart';
+import 'package:collegex/screen/home/home.dart';
 import 'package:collegex/state/auth/auth_provider.dart';
 import 'package:collegex/styles/icons.dart';
 import 'package:collegex/widgets/textfields.dart';
@@ -21,10 +21,12 @@ class _LoginScreenState
   Widget build(BuildContext context) {
     final loginHelper =
         ref.watch(xAuthProvider.notifier);
+
     return SafeArea(
       child: SingleChildScrollView(
           child: loginHelper.authState.isbinary
-              ? Column(
+              ? Homescreen() //TODO:properly navigate to homepage
+              : Column(
                   children: [
                     const Image(
                         image: AssetImage(
@@ -254,8 +256,7 @@ class _LoginScreenState
                       ),
                     ),
                   ],
-                )
-              : Container()),
+                )),
     );
   }
 }
