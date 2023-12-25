@@ -19,6 +19,11 @@ class xAuthNotifier
     state = AuthState.authenticated;
   }
 
+  Future<void> googleLogin() async {
+    _authService.googleAuth();
+    state = AuthState.authenticated;
+  }
+
   Future<void> logout() async {
     await _authService.logout();
     state = AuthState.unauthenticated;

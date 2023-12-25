@@ -1,7 +1,11 @@
+import 'package:collegex/core/auth/auth_state.dart';
 import 'package:collegex/firebase_options.dart';
+import 'package:collegex/screen/home/home.dart';
 import 'package:collegex/screen/loading_screen.dart';
 import 'package:collegex/screen/login/login_screen.dart';
+import 'package:collegex/state/auth/auth_provider.dart';
 import 'package:collegex/utilities/ux_utils.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -46,27 +50,23 @@ class MyApp extends ConsumerWidget {
   }
 }
 
-class MyHomePage extends StatefulWidget {
+class MyHomePage extends ConsumerWidget {
   const MyHomePage(
-      {super.key, required this.title});
-
-  final String title;
+      {super.key, required String title});
 
   @override
-  State<MyHomePage> createState() =>
-      _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
+  Widget build(
+      BuildContext context, WidgetRef ref) {
+    final authHelper = ref.watch(xAuthProvider);
+    return Scaffold(
         backgroundColor: Colors.black,
         // appBar: AppBar(
         //   backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         //
         //   title: Text(widget.title),
         // ),
-        body: LoginScreen());
+        body: authHelper.isbinary
+            ? Homescreen()
+            : LoginScreen());
   }
 }
